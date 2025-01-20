@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>NBSED</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+      <style>
+         .carousel-item {
+            height: 80vh; 
+        }
+        .carousel-item img {
+            object-fit: cover; 
+            height: 100%; 
+            width: 100%; 
+        }
+        .custom-img {
+            height: 200px; 
+            object-fit: cover; 
+        }
+        .card {
+            border: none; 
+        }
+        .position-relative {
+            position: relative; 
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white; 
+            opacity: 0.8; 
+            font-size: 1.5rem;
+            text-align: center; 
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .blur-effect {
+          filter: blur(5px);
+        transition: filter 0.3s ease;
+      }
+
+      .blur-effect:hover {
+        filter: none;
+      }
+      .navbar {
+      background: linear-gradient(90deg, #0056b3, #007bff); 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .navbar .nav-link {
+      color: white !important;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease-in-out;
+    }
+    .navbar .nav-link:hover {
+      color: #ffd700 !important; 
+    }
+    .navbar .nav-link.active {
+      color: #ffd700 !important; 
+      border-bottom: 2px solid #ffd700;
+    }
+    .carousel img {
+      height: 400px;
+      object-fit: cover;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: #0056b3;
+    }
+
+    .branding {
+      background-color: #f8f9fa;
+      padding: 1rem 2%;
+    }
+    .branding span {
+      color: #0056b3;
+      font-weight: bold;
+    }
+      </style>
+</head>
+<body>
+  <div class="d-flex flex-column flex-md-row align-items-center branding">
+    <img src="drdo logo.png" alt="" class="img-fluid" style="max-height: 50px; margin-left: 2%;"> <!-- DRDO logo -->
+    <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none flex-grow-1 justify-content-center">
+      <span class="fs-4">NBSED - National Bureau of Scientific Exploration and Defence</span>
+    </a>
+    <img src="G20 logo.jpeg" alt="" class="img-fluid" style="max-height: 50px; margin-right: 2%;"> <!-- G20 logo -->
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a href="#Home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#NBSED" class="nav-link">NBSED</a></li>
+          <li class="nav-item"><a href="#Research" class="nav-link">Research</a></li>
+          <li class="nav-item"><a href="#RTI" class="nav-link">RTI</a></li>
+          <li class="nav-item"><a href="#Recruitment" class="nav-link">Recruitment</a></li>
+          <li class="nav-item"><a href="#About us" class="nav-link">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel Slider -->
+  <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/slider-image1.jpg" class="d-block w-100 h-100" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/slider-image1.jpg" class="d-block w-100 h-100" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/slider-image1.jpg" class="d-block w-100 h-100" alt="Image 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+    </div>
+  </div>
+      </div>
+      <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="row w-100 align-items-stretch g-0">
+          <!-- First Column: What's New -->
+          <div class="col-md-6">
+            <div class="bg-body-tertiary border-end border-3 rounded-start-3 p-3 h-100">
+              <h4 class="fst-italic">What's New</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Example blog post title
+                        <img src="images/animated.gif" alt="">
+                      </h6>
+                      <small class="text-body-secondary">January 15, 2024</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">This is another blog post title
+                        <img src="images/animated.gif" alt="">
+                      </h6>
+                      <small class="text-body-secondary">January 14, 2024</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Longer blog post title: This one has multiple lines!
+                        <img src="images/animated.gif" alt="">
+                      </h6>
+                      <small class="text-body-secondary">January 13, 2024</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Second Column: Message Board -->
+          <div class="col-md-6">
+            <div class="bg-body-tertiary border-start border-3 rounded-end-3 p-3 h-100">
+              <h4 class="fst-italic py-1 border-bottom ">Message Board</h4>
+              <ul class="list-unstyled">
+                <li class="py-2 border-bottom">Welcome to the message board!</li>
+                <li class="py-2 border-bottom">Stay tuned for more updates.</li>
+                <li class="py-2 border-bottom">Upcoming events will be updated here.</li>
+                <li class="py-2 border-bottom">Check out the latest blog posts!</li>
+                <li class="py-2">Feel free to leave a message below.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      
+
+
+      <div class="bg-body-tertiary border mt-5" style="border-radius: 8px; border-width: 10px; border-style: solid;">
+        <!-- First Row -->
+        <div class="row g-0">
+          <div class="col-6">
+            <div class="position-relative border d-flex align-items-center" style="height: 300px;">
+              <img src="images/Quantum computing.jpg" alt="Image 1" class="img-fluid w-100 h-100 blur-effect">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold fs-4">
+                Quantum Computing
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="position-relative border d-flex align-items-center" style="height: 300px;">
+              <img src="images/Space research.jpg" alt="Image 2" class="img-fluid w-100 h-100 blur-effect">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold fs-4">
+                Space Research
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Second Row -->
+  <div class="row g-0">
+    <div class="col-9">
+      <div class="position-relative border d-flex align-items-center" style="height: 200px;">
+        <img src="images/lufi.jpg" alt="Image 3" class="img-fluid w-100 h-100 blur-effect">
+        <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold fs-4">
+          Bio Defence
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="position-relative border d-flex align-items-center" style="height: 200px;">
+        <img src="images/advance energy.jpg" alt="Image 4" class="img-fluid w-100 h-100 blur-effect">
+        <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold fs-4">
+          Advance Energy
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      
+    <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom  text-center display-6 fw-bold">Research and Innovations</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/slider-image1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Project 1</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/slider-image1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Project 2</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/slider-image1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Project 3</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my-3 p-3 bg-body rounded shadow-sm" style="margin-left: 80px; margin-right: 60px;">
+  <h2 class="pb-2 border-bottom  text-center display-6 fw-bold " style="margin-left: 10px; margin-right: 10px;">News and Updates</h2>
+    <div class="updates-container" style="padding: 10px; border-radius: 5px;">
+        <h6 class="border-bottom pb-2 mb-0">Recent updates</h6>
+        <div class="d-flex text-body-secondary pt-3" style="border-bottom: 1px solid #dee2e6; padding-bottom: 10px;">
+            <p class="pb-3 mb-0 small lh-sm">
+               
+                Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+                <img src="images/animated.gif" alt="">
+            </p>
+        </div>
+        <div class="d-flex text-body-secondary pt-3 " style="border-bottom: 1px solid #dee2e6; padding-bottom: 10px;">
+          <p class="pb-3 mb-0 small lh-sm ">
+            Some more representative placeholder content, related to this other user. Another status update, perhaps.
+            <img src="images/animated.gif" alt="">
+          </p>
+        </div>
+        <div class="d-flex text-body-secondary pt-3" style="border-bottom: 1px solid #dee2e6; padding-bottom: 10px;"">
+          <p class="pb-3 mb-0 small lh-sm ">
+            This user also gets some representative placeholder content. Maybe they did something interesting, and you really want to highlight this in the recent updates.
+            <img src="images/animated.gif" alt="">
+          </p>
+        </div>
+        
+        <small class="d-block text-end mt-3">
+          <a href="#">All updates</a>
+        </small>
+    </div>
+  </div>
+  
+<footer class="footer">
+  <div class="container text-center">
+      <p class="mb-0">© 2025 NBSED. All Rights Reserved.</p>
+      <div class="d-flex justify-content-center flex-wrap">
+        <p class="mb-0 border-3 me-3">Contact us</p>
+        <p class="mb-0 me-3">Terms and Conditions</p>
+        <p class="mb-0 border-3 me-3">Privacy Policy</p>
+        <p class="mb-0 me-3">Copyright help</p>
+        <p class="mb-0 border-3 me-3">Hyperlinking</p>
+        <p class="mb-0 border-3 me-3">Disclaimer</p>
+      </div>
+      <!-- Visitor Counter -->
+      <div id="visitorCount" class="text-end mt-3">
+        <h5>Number of Visitors: <span id="count">0</span></h5>
+      </div>
+  </div>
+</footer>
+<script>
+  // Initialize visitor count
+  let visitorCount = localStorage.getItem('visitorCount') || 0;
+  visitorCount++;
+  localStorage.setItem('visitorCount', visitorCount);
+  
+  // Display the visitor count
+  document.getElementById('count').innerText = visitorCount;
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
